@@ -151,11 +151,6 @@ public class TestKata1LambdaBasics {
     @Order(6)
     public void customFunctionWithLambda() {
 
-        int integer = 10;
-
-        String s = Integer.toBinaryString(integer);
-
-
         // Create a Function that maps any integer into a String using a lambda syntax
         // the empty String Replaced with toBinaryString method
         Function<Integer, String> toBinaryStringFunction = i -> Integer.toBinaryString(i);
