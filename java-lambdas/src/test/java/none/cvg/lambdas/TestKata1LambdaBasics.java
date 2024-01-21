@@ -137,16 +137,10 @@ public class TestKata1LambdaBasics {
 
         final AtomicInteger counter = new AtomicInteger();
 
-        // TODO:
-        //  Replace the anonymous class with a lambda. Hint: () ->
-        //  The addAndGet() needs to be updated to add 1 instead of 0.
-        Runnable runnable = new Runnable() {
-            @Override
-            public void run() {
-                counter.addAndGet(0);
-            }
-        };
 
+        //  anonymous class Replaced with a lambda.
+        //  addAndGet() updated to add 1 instead of 0.
+        Runnable runnable = () -> counter.addAndGet(1);
         runnable.run();
 
         assertEquals(1, counter.get() );
