@@ -82,12 +82,15 @@ public class TestKata1LambdaBasics {
         //  Replace the below anonymous class with a lambda call
         //  Most IDEs allow for an automatic conversion
         //  Hint: object -> object.method()
-        Function<IntegerPair, Integer> getSecond = new Function<>() {
+/*        Function<IntegerPair, Integer> getSecond = new Function<>() {
             @Override
             public Integer apply(IntegerPair integerPair) {
                 return integerPair.getSecond();
             }
-        };
+        };*/
+
+        //replaced with lambda call
+        Function<IntegerPair, Integer> getSecond = pair -> pair.getSecond();
 
         // TODO:
         //  Fix the assertion to return the correct expectation (6)
