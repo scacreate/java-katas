@@ -155,12 +155,10 @@ public class TestKata1LambdaBasics {
 
         String s = Integer.toBinaryString(integer);
 
-        // TODO:
-        //  Create a Function that maps any integer into a String using a lambda syntax
-        //  Do not create a new method. Replace the empty String below to invoke a toBinaryString
-        //  Check API: java.util.function.Function
-        //  Check API: java.util.function.Function.apply(?)
-        Function<Integer, String> toBinaryStringFunction = i -> "";
+
+        // Create a Function that maps any integer into a String using a lambda syntax
+        // the empty String Replaced with toBinaryString method
+        Function<Integer, String> toBinaryStringFunction = i -> Integer.toBinaryString(i);
 
         assertEquals("1010",
                 toBinaryStringFunction.apply(10),
