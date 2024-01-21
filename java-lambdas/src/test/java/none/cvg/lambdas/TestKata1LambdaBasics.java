@@ -170,14 +170,9 @@ public class TestKata1LambdaBasics {
     @Order(7)
     public void customFunctionWithMethodReference() {
 
-        // TODO:
         //  Create a Function that maps any integer into a String using a method reference
         //  Do not create a new method. Replace the lambda below to invoke a toBinaryString
-        //  as a method reference
-        //  Check API: java.util.function.Function
-        //  Check API: java.util.function.Function.apply(?)
-        //  Check API: java.lang.Integer.toBinaryString(?)
-        Function<Integer, String> toBinaryStringFunction = x -> "";
+        Function<Integer, String> toBinaryStringFunction = Integer::toBinaryString;
 
         assertEquals("1010",
                 toBinaryStringFunction.apply(10),
