@@ -113,12 +113,15 @@ public class TestKata1LambdaBasics {
         //  Replace the below anonymous class with a method reference
         //  Most IDEs allow for an automatic conversion (no parenthesis for method)
         //  Hint: object -> Object::method
-        Function<IntegerPair, Integer> getSecond = new Function<>() {
+/*        Function<IntegerPair, Integer> getSecond = new Function<>() {
             @Override
             public Integer apply(IntegerPair integerPair) {
                 return integerPair.getSecond();
             }
-        };
+        };*/
+
+        //replaced with method reference
+        Function<IntegerPair, Integer> getSecond = IntegerPair::getSecond;
 
         // TODO:
         //  Fix the assertion to return the correct expectation (6)
