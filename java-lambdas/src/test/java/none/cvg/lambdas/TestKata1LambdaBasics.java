@@ -34,18 +34,11 @@ public class TestKata1LambdaBasics {
     public void newObjectUsingLambdas() {
         IntegerPair classic = new IntegerPair();
 
-        //
-        //  Replace the anonymous class with a lambda.
-        //  Hint: () -> new object()
-/*        IntegerPairFactory integerPairFactory = new IntegerPairFactory() {
-            @Override
-            public IntegerPair get() {
-                return new IntegerPair();
-            }
-        };*/
-
         //anonymous class replaced with a lambda.
-        IntegerPairFactory integerPairFactory = () -> new IntegerPair();
+        //IntegerPairFactory integerPairFactory = () -> new IntegerPair();
+
+        //lambda replaced with method reference.
+        IntegerPairFactory integerPairFactory = IntegerPair::new;
 
         assertEquals(classic, integerPairFactory.get(),
                 "Both objects should be equal");
