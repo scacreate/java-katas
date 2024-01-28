@@ -48,13 +48,16 @@ public class TestKata1InstantAndDateInterop {
         // TODO: Replace the Instant.now() with an instant from classicDate.
         //  Use a Date API that converts Date instances into Instant instances.
         //  Check: java.util.Date.toInstant()
-        Instant instant = Instant.now();
+        //Instant instant = Instant.now();
+
+        Instant currentDate = classicDate.toInstant();
+
 
         // TODO: Replace the "null" below to get milliseconds from epoch from the Instant
         //  Use an Instant API which converts it into milliseconds
         //  Check: java.time.Instant.toEpochMilli()
         assertEquals(Long.valueOf(classicDate.getTime()),
-                null,
+                currentDate.toEpochMilli(),
                 "Date and Instant milliseconds should be equal");
     }
 
