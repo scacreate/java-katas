@@ -77,7 +77,7 @@ public class TestKata1InstantAndDateInterop {
         // NOTE: We use a custom assertion here since the millis to second arithmetic may cause
         //       rounding issues. We add a tolerance of 1 second.
         assertAlmostEquals(classicDateInSeconds,
-                null,
+                instant.getEpochSecond(),
                 1L,
                 "Date and Instant seconds should almost match");
     }
