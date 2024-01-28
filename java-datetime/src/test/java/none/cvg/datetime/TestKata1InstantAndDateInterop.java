@@ -4,6 +4,7 @@ import java.text.SimpleDateFormat;
 import java.time.Instant;
 import java.util.Date;
 import java.util.TimeZone;
+import java.util.concurrent.TimeUnit;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -85,14 +86,14 @@ public class TestKata1InstantAndDateInterop {
     @Test
     @Tag("TODO")
     @Order(3)
-    public void verifyInstantHasNanoseconds() {
+    public void verifyInstantHasNanoseconds() throws InterruptedException {
 
         Instant instant = Instant.now();
 
         // TODO: Replace the string "-2" below to get nanos from the Instant
         //  Assert that instant has nano seconds.
         //  Check: java.time.Instant.getNano()
-        assertTrue(Integer.valueOf("-2") > -1,
+        assertTrue(Integer.valueOf(instant.getNano()) > -1,
                 "Instant should have nanoseconds");
     }
 
